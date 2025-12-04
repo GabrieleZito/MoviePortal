@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
-import NavBar from "@/components/NavBar.jsx";
+import { NavBar } from "@/components/NavBar.jsx";
 import FilmPage from "@/components/FilmPage/FilmPage.jsx";
 import TVPage from "@/components/TVPage/TVPage.jsx";
 import FavoritePage from "@/components/FavoritePage/FavoritePage.jsx";
