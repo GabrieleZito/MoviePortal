@@ -44,7 +44,7 @@ export default function FilmPage() {
                 setMovies(data.results);
                 setIsLoadingMovies(false);
             } catch (error) {
-                console.error("Errore durante il caricamento dei film");
+                console.error("Errore durante il caricamento dei film: ", error);
             }
         };
 
