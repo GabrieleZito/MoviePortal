@@ -5,7 +5,7 @@ import tmdbAPI from "./api/movieDB";
 function App() {
     useEffect(() => {
         const fetchAPI = async () => {
-            const data = await tmdbAPI.getTVSeriesRelatedVideos();
+            const data = await tmdbAPI.getTVSeriesgenres();
             console.log(data);
         };
         fetchAPI();

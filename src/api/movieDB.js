@@ -78,6 +78,18 @@ const getTVSeriesRelatedVideos = async (seriesId = 1396, language = "en-US") => 
     return res.data;
 };
 
+const getMoviegenres = async (language = "en") => {
+    console.log("getting movie genres");
+    const res = await axiosConf.get(`/genre/movie/list?language=${language}`);
+    return res.data;
+};
+
+const getTVSeriesgenres = async (language = "en") => {
+    console.log("getting tv series genres");
+    const res = await axiosConf.get(`/genre/tv/list?language=${language}`);
+    return res.data;
+};
+
 const tmdbAPI = {
     getPopularMovies,
     getTopRatedMovies,
@@ -91,6 +103,8 @@ const tmdbAPI = {
     getTVSeriesDetails,
     getTVSeriesCast,
     getTVSeriesRelatedVideos,
+    getMoviegenres,
+    getTVSeriesgenres,
 };
 
 export default tmdbAPI;
