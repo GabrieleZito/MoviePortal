@@ -1,7 +1,7 @@
 import { Card } from "../Card/Card";
 import "./FavoritePage.css";
 
-function FavoritePage({ favorites, setFavorites }) {
+function FavoritePage({ favorites, removeFavorite }) {
     return (
         <div>
             {favorites.length > 0 ? (
@@ -11,7 +11,7 @@ function FavoritePage({ favorites, setFavorites }) {
                     ))}
                 </div>
             ) : (
-                "Non hai ancora aggiunto nessun Preferito"
+                <div>"Non hai ancora aggiunto nessun Preferito"</div>
             )}
         </div>
     );
