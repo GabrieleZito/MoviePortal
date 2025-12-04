@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
-import NavBar from "./Components/NavBar.jsx";
-import FilmPage from "./components/FilmPage/FilmPage.jsx";
-import TVPage from "./components/TVPage/TVPage.jsx";
-import FavoritePage from "./components/FavoritePage/FavoritePage.jsx";
-import AccountPage from "./components/AccountPage/AccountPage.jsx";
-import ContactsPage from "./components/ContactsPage/ContactsPage.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import NavBar from "@/components/NavBar";
+import FilmPage from "@/components/FilmPage/FilmPage";
+import TVPage from "@/components/TVPage/TVPage.jsx";
+import FavoritePage from "@/components/FavoritePage/FavoritePage.jsx";
+import AccountPage from "@/components/AccountPage/AccountPage.jsx";
+import ContactsPage from "@/components/ContactsPage/ContactsPage.jsx";
+import Footer from "@/components/Footer/Footer.jsx";
 
 function App() {
     const [page, setPage] = useState(1);
