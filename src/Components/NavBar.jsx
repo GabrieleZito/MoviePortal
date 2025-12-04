@@ -2,22 +2,7 @@ import { useState } from "react";
 import "./NavBar.css";
 
 export default function NavBar({ changePage }) {
-    const [showGenres, setShowGenres] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
-
-    const genres = [
-        "Crime",
-        "Horror",
-        "Fantascienza",
-        "Comici",
-        "Animazione",
-        "Drammatici",
-        "Fantasy",
-        "Azione",
-        "Thriller",
-        "Sport",
-        "Anime",
-    ];
 
     return (
         <nav className={`navbar ${darkMode ? "dark" : ""}`}>
@@ -44,17 +29,6 @@ export default function NavBar({ changePage }) {
 
             {/* GENERI + DARK MODE */}
             <div className="navbar-right">
-                <div className="genres" onMouseEnter={() => setShowGenres(true)} onMouseLeave={() => setShowGenres(false)}>
-                    Generi ▾
-                    {showGenres && (
-                        <div className="genres-menu">
-                            {genres.map((g) => (
-                                <div key={g}>{g}</div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-
                 {/* SWITCH */}
                 <label className="switch">
                     <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
