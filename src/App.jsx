@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavBar from "./Components/NavBar.jsx";
+import NavBar from "./components/NavBar.jsx";
 import FilmPage from "./components/FilmPage/FilmPage";
 import TVPage from "./components/TVPage/TVPage.jsx";
 import FavoritePage from "./components/FavoritePage/FavoritePage.jsx";
