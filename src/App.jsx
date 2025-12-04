@@ -6,6 +6,7 @@ import FavoritePage from "./components/FavoritePage/FavoritePage";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import AccountPage from "./components/AccountPage/AccountPage";
 import ContactsPage from "./components/ContactsPage/ContactsPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const [page, setPage] = useState(1);
@@ -32,6 +33,7 @@ function App() {
         <>
             <NavBar changePage={changePage} />
             {renderPage}
+            <Footer />
         </>
     );
 }
