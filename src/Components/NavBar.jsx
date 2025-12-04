@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-export function NavBar({ changePage }) {
+export function Navbar({ changePage }) {
     const [darkMode, setDarkMode] = useState(false);
 
     return (

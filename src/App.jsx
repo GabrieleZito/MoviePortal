@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
-import { NavBar } from "@/components/NavBar.jsx";
+import { Navbar } from "@/components/Navbar.jsx";
 import FilmPage from "@/components/FilmPage/FilmPage.jsx";
 import TVPage from "@/components/TVPage/TVPage.jsx";
 import FavoritePage from "@/components/FavoritePage/FavoritePage.jsx";
@@ -31,7 +31,7 @@ function App() {
 
     return (
         <>
-            <NavBar changePage={changePage} />
+            <Navbar changePage={changePage} />
             {renderPage}
             <Footer />
         </>
