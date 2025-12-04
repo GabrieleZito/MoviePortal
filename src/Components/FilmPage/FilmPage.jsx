@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import GenreSelector from "../GenreSelector/GenreSelector";
 import tmdbAPI from "../../api/movieDB";
 import "./FilmPage.css";
-import Carousel from "../Carousel/Carousel.jsx";
+import Carousel from "@/components/Carousel/Carousel";
 
 export default function FilmPage() {
     const [genres, setGenres] = useState(null);
