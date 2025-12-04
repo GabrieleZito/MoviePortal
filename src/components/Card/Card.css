@@ -1,0 +1,68 @@
+.cardContainer {
+  width: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.poster {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.filmInfo {
+  padding: 10px;
+}
+
+.filmTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.releaseDate {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.filmOverview {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #444;
+  margin-bottom: 12px;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filmVote {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.toggleOverviewBtn {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  color: #ffda44;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+}
+
+.toggleOverviewBtn:hover {
+  background-color: #ffda44;
+  transform: scale(1.05);
+  color: black;
+}

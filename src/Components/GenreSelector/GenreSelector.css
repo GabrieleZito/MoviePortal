@@ -1,0 +1,36 @@
+.genres {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.genres-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px;
+    z-index: 10;
+    min-width: 200px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+}
+
+.genre-item {
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.genre-item:hover {
+    background: #eee;
+}
+
+.genre-item.selected {
+    background: #ddd;
+    font-weight: bold;
+}
