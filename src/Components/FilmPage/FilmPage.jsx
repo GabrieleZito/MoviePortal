@@ -32,7 +32,6 @@ export default function FilmPage() {
 
             try {
                 let data;
-
                 if (selectedCategory === "popular") {
                     data = await tmdbAPI.getPopularMovies(1, "it-IT");
                 } else if (selectedCategory === "upcoming") {
@@ -41,7 +40,6 @@ export default function FilmPage() {
                     data = await tmdbAPI.getTopRatedMovies(1, "it-IT");
                 }
                 console.log("data.results: ");
-
                 console.log(data.results);
                 setMovies(data.results);
                 setIsLoadingMovies(false);
@@ -52,6 +50,12 @@ export default function FilmPage() {
 
         getMoviesByCategory();
     }, [selectedCategory]);
+
+    const changeGenre = async (genre) => {
+        console.log(genre);
+        const data = await tmdbAPI.getMovieByGenre(genre.id);
+        setMovies(data.results);
+    };
 
     return (
         <div>
@@ -65,19 +69,9 @@ export default function FilmPage() {
                 <div className="nav-item" onClick={() => setSelectedCategory("top_rated")}>
                     Top Rated
                 </div>
-                {isLoadingGenres ? "" : <GenreSelector genres={genres} onSelect={(g) => console.log("Hai selezionato:", g)} />}
+                {isLoadingGenres ? "" : <GenreSelector genres={genres} onSelect={(g) => changeGenre(g)} />}
             </div>
-            <div>
-                {isLoadingMovies ? (
-                    ""
-                ) : movies.length > 0 ? (
-                    <div>
-                        <Carousel movies={movies} />{" "}
-                    </div>
-                ) : (
-                    ""
-                )}
-            </div>
+            <div>{isLoadingMovies ? "" : movies.length > 0 ? <Carousel movies={movies} /> : ""}</div>
         </div>
     );
 }

@@ -90,6 +90,22 @@ const getTVSeriesgenres = async (language = "en") => {
     return res.data;
 };
 
+const getMovieByGenre = async (genreId = 28, language = "en-US", page = 1) => {
+    console.log("getting movies with genreId: ", genreId);
+    const res = await axiosConf.get(
+        `/discover/movie?include_adult=false&include_video=false&language=${language}&page=${page}&sort_by=popularity.desc&with_genres=${genreId}`
+    );
+    return res.data;
+};
+
+const getTVSeriesByGenre = async (genreId = 28, language = "en-US", page = 1) => {
+    console.log("getting tv series with genreId: ", genreId);
+    const res = await axiosConf.get(
+        `/discover/tv?include_adult=false&include_video=false&language=${language}&page=${page}&sort_by=popularity.desc&with_genres=${genreId}`
+    );
+    return res.data;
+};
+
 const tmdbAPI = {
     getPopularMovies,
     getTopRatedMovies,
@@ -105,6 +121,8 @@ const tmdbAPI = {
     getTVSeriesRelatedVideos,
     getMoviegenres,
     getTVSeriesgenres,
+    getMovieByGenre,
+    getTVSeriesByGenre,
 };
 
 export default tmdbAPI;
