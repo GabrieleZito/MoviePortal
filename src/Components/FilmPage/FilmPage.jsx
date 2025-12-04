@@ -20,7 +20,7 @@ export default function FilmPage() {
                 setGenres(data.genres);
                 setisLoadingGenres(false);
             } catch (error) {
-                console.error("ERRORE durante il caricamento dei generi");
+                console.error("ERRORE durante il caricamento dei generi: ", error);
             }
         };
         getGenres();

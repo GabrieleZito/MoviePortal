@@ -11,7 +11,7 @@ function FavoritePage({ favorites, removeFavorite }) {
                     ))}
                 </div>
             ) : (
-                <div>"Non hai ancora aggiunto nessun Preferito"</div>
+                <div onClick={removeFavorite}>"Non hai ancora aggiunto nessun Preferito"</div>
             )}
         </div>
     );

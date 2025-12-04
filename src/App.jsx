@@ -1,9 +1,9 @@
 import { useState } from "react";
-import NavBar from "./components/NavBar.jsx";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+import NavBar from "./Components/NavBar.jsx";
 import FilmPage from "./components/FilmPage/FilmPage";
 import TVPage from "./components/TVPage/TVPage.jsx";
 import FavoritePage from "./components/FavoritePage/FavoritePage.jsx";
-import { useLocalStorage } from "./hooks/useLocalStorage";
 import AccountPage from "./components/AccountPage/AccountPage.jsx";
 import ContactsPage from "./components/ContactsPage/ContactsPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";

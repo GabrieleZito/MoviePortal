@@ -18,7 +18,7 @@ export default function TVPage() {
                 setGenres(data.genres);
                 setisLoadingGenres(false);
             } catch (error) {
-                console.error("ERRORE durante il caricamento dei generi");
+                console.error("ERRORE durante il caricamento dei generi: ", error);
             }
         };
         getGenres();
@@ -42,7 +42,7 @@ export default function TVPage() {
                 setSeries(data.results);
                 setIsLoadingSeries(false);
             } catch (error) {
-                console.error("Errore durante il caricamento delle serie tv");
+                console.error("Errore durante il caricamento delle serie tv: ", error);
             }
         };
 
