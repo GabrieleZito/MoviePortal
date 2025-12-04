@@ -6,7 +6,7 @@ import TVPage from "./Components/TVPage/TVPage.jsx";
 import FavoritePage from "./components/FavoritePage/FavoritePage.jsx";
 import AccountPage from "./Components/AccountPage/AccountPage.jsx";
 import ContactsPage from "./Components/ContactsPage/ContactsPage.jsx";
-import Footer from "./Components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const [page, setPage] = useState(1);
