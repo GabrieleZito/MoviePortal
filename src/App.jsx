@@ -7,10 +7,11 @@ import FavoritePage from "./components/FavoritePage/FavoritePage.jsx";
 import AccountPage from "./Components/AccountPage/AccountPage.jsx";
 import ContactsPage from "./Components/ContactsPage/ContactsPage.jsx";
 import Footer from "./components/Footer/Footer";
+import { useFavorite } from "./hooks/useFavorite";
 
 function App() {
     const [page, setPage] = useState(1);
-    const [favorites, , ,] = useLocalStorage("favorites", []);
+    const { favorites } = useFavorite();
     let renderPage = <div> BOH </div>;
 
     if (page == 1) {
