@@ -1,6 +1,6 @@
-import tmdbAPI from "@/api/movieDB";
 import { useEffect, useState } from "react";
 import Carousel from "../Carousel/Carousel";
+import tmdbAPI from "../../api/movieDB";
 
 function SearchPage({ search }) {
     console.log(search);

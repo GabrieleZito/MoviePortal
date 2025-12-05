@@ -1,0 +1,7 @@
+.pagina {
+    height: calc(100vh - 20px);
+}
+
+.pagina.dark {
+    background-color: #333;
+}

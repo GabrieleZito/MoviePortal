@@ -1,19 +1,22 @@
 import { useState } from "react";
-import { useLocalStorage } from "./hooks/useLocalStorage";
-import { Navbar } from "./Components/Navbar.jsx";
-import FilmPage from "./Components/FilmPage/FilmPage.jsx";
-import TVPage from "./Components/TVPage/TVPage.jsx";
-import FavoritePage from "./components/FavoritePage/FavoritePage.jsx";
-import AccountPage from "./Components/AccountPage/AccountPage.jsx";
-import ContactsPage from "./Components/ContactsPage/ContactsPage.jsx";
+import SearchPage from "./components/SearchPage/SearchPage";
+import FilmPage from "./components/FilmPage/FilmPage";
+import TVPage from "./components/TVPage/TVPage";
+import FavoritePage from "./components/FavoritePage/FavoritePage";
+import ContactsPage from "./components/ContactsPage/ContactsPage";
+import AccountPage from "./components/AccountPage/AccountPage";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { useFavorite } from "./hooks/useFavorite";
-import SearchPage from "./components/SearchPage/SearchPage";
+import "./App.css";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
     const [page, setPage] = useState(1);
     const [search, setSearch] = useState("");
     const { favorites } = useFavorite();
+    const { theme } = useTheme();
+
     let renderPage = <div> BOH </div>;
     if (page == 0) {
         renderPage = <SearchPage search={search} />;
@@ -35,9 +38,11 @@ function App() {
 
     return (
         <>
-            <Navbar changePage={changePage} setSearch={setSearch} />
-            {renderPage}
-            <Footer />
+            <div className={`pagina ${theme}`}>
+                <Navbar changePage={changePage} setSearch={setSearch} />
+                {renderPage}
+                <Footer />
+            </div>
         </>
     );
 }

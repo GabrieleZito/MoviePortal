@@ -66,3 +66,22 @@
   transform: scale(1.05);
   color: black;
 }
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heartButton {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: transform 0.2s ease;
+}
+
+.heartButton:hover {
+  transform: scale(1.15);
+}
