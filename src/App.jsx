@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SearchPage from "./Components/SearchPage/SearchPage";
-import FilmPage from "./components/FilmPage/FilmPage";
+import FilmPage from "./Components/FilmPage/FilmPage";
 import TVPage from "./components/TVPage/TVPage";
 import FavoritePage from "./components/FavoritePage/FavoritePage";
 import ContactsPage from "./components/ContactsPage/ContactsPage";
