@@ -30,7 +30,7 @@ export default function Card({ film }) {
 
             <div className="filmInfo">
                 <div className="titleRow">
-                    <h2 className="filmTitle">{film.title}</h2>
+                    <h2 className="filmTitle">{film.title || film.name}</h2>
 
                     <button className="heartButton" onClick={handleFavoriteClick} aria-label="Aggiungi ai preferiti">
                         {favored ? "❤️" : "🤍"}
