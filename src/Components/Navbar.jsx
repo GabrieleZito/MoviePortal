@@ -30,7 +30,6 @@ export function Navbar({ changePage, setSearch }) {
                 <li onClick={() => changePage(3)}>Preferiti</li>
                 <li onClick={() => changePage(4)}>Contatti</li>
                 <li onClick={() => changePage(5)}>Account</li>
-                <li>Esci</li>
             </ul>
 
             {/* GENERI + DARK MODE */}
