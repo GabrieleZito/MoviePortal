@@ -4,7 +4,7 @@ import FilmPage from "./Components/FilmPage/FilmPage";
 import TVPage from "./Components/TVPage/TVPage";
 import FavoritePage from "./components/FavoritePage/FavoritePage";
 import ContactsPage from "./Components/ContactsPage/ContactsPage";
-import AccountPage from "./components/AccountPage/AccountPage";
+import AccountPage from "./Components/AccountPage/AccountPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { useFavorite } from "./hooks/useFavorite";
