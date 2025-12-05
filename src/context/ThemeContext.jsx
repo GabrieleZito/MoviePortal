@@ -3,11 +3,11 @@ import { createContext, useState } from "react";
 export const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("light");
 
-    const toggleTheme = () => {
-        setTheme((prev) => (prev === "light" ? "dark" : "light"));
-    };
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
 
     const isLight = theme === "light";
     const value = {
@@ -16,5 +16,7 @@ export function ThemeProvider({ children }) {
         isLight,
     };
 
-    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
