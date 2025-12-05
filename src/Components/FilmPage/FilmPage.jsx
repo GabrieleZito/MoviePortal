@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import GenreSelector from "../GenreSelector/GenreSelector";
 import tmdbAPI from "../../api/movieDB";
-import Carousel from "../Carousel/Carousel";
+import Carousel from "@/components/Carousel/Carousel";
 import "./FilmPage.css";
 
 export default function FilmPage() {
