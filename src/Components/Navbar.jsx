@@ -2,9 +2,13 @@ import { useState } from "react";
 import "./NavBar.css";
 import { useTheme } from "@/hooks/useTheme";
 
-export function Navbar({ changePage }) {
-    const [search, setSearch] = useState("");
+export function Navbar({ changePage, setSearch }) {
     const { theme, toggleTheme } = useTheme();
+
+    const search = (e) => {
+        changePage(0);
+        setSearch(e.target.value);
+    };
 
     return (
         <nav className={`navbar ${theme}`}>
@@ -14,12 +18,7 @@ export function Navbar({ changePage }) {
 
                 {/* SEARCH */}
                 <div className="search-box">
-                    <input
-                        type="text"
-                        placeholder="cosa vuoi cercare..."
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                    />
+                    <input type="text" placeholder="cosa vuoi cercare..." onChange={search} />
                     <button>Cerca</button>
                 </div>
             </div>
