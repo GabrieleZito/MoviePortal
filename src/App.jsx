@@ -8,13 +8,16 @@ import AccountPage from "./Components/AccountPage/AccountPage.jsx";
 import ContactsPage from "./Components/ContactsPage/ContactsPage.jsx";
 import Footer from "./components/Footer/Footer";
 import { useFavorite } from "./hooks/useFavorite";
+import SearchPage from "./components/SearchPage/SearchPage";
 
 function App() {
     const [page, setPage] = useState(1);
+    const [search, setSearch] = useState("");
     const { favorites } = useFavorite();
     let renderPage = <div> BOH </div>;
-
-    if (page == 1) {
+    if (page == 0) {
+        renderPage = <SearchPage search={search} />;
+    } else if (page == 1) {
         renderPage = <FilmPage />;
     } else if (page == 2) {
         renderPage = <TVPage />;
@@ -32,7 +35,7 @@ function App() {
 
     return (
         <>
-            <Navbar changePage={changePage} />
+            <Navbar changePage={changePage} setSearch={setSearch} />
             {renderPage}
             <Footer />
         </>
