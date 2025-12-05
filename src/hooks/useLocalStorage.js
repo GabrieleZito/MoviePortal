@@ -15,11 +15,11 @@ export function useLocalStorage(key, initialValue) {
     };
 
     const addFavorite = (newItem) => {
-        setValue((v) => [...v, newItem]);
+        setStoredValue([...value, newItem]);
     };
 
     const removeFavorite = (id) => {
-        setValue((values) => values.filter((v) => v.id != id));
+        setStoredValue(value.filter((v) => v.id != id));
     };
 
     const setStoredValue = (value) => {
