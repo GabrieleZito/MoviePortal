@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import GenreSelector from "../GenreSelector/GenreSelector";
-import Carousel from "../Carousel/Carousel";
+import Carousel from "@/components/Carousel/Carousel";
 import tmdbAPI from "../../api/movieDB";
 import "./TVPage.css";
 
