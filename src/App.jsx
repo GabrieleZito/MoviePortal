@@ -1,11 +1,11 @@
 import { useState } from "react";
-import SearchPage from "./components/SearchPage/SearchPage";
-import FilmPage from "./components/FilmPage/FilmPage";
-import TVPage from "./components/TVPage/TVPage";
+import SearchPage from "./Components/SearchPage/SearchPage";
+import FilmPage from "./Components/FilmPage/FilmPage";
+import TVPage from "./Components/TVPage/TVPage";
 import FavoritePage from "./components/FavoritePage/FavoritePage";
-
-import AccountPage from "./components/AccountPage/AccountPage";
-import Navbar from "./components/Navbar/Navbar";
+import ContactsPage from "./Components/ContactsPage/ContactsPage";
+import AccountPage from "./Components/AccountPage/AccountPage";
+import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { useFavorite } from "./hooks/useFavorite";
 import "./App.css";
