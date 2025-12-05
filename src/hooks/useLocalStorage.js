@@ -10,6 +10,10 @@ export function useLocalStorage(key, initialValue) {
         }
     });
 
+    const isFavorite = (id) => {
+        return value.find((v) => v.id == id);
+    };
+
     const addFavorite = (newItem) => {
         setValue((v) => [...v, newItem]);
     };
@@ -23,5 +27,5 @@ export function useLocalStorage(key, initialValue) {
         localStorage.setItem(key, JSON.stringify(value));
     };
 
-    return [value, setStoredValue, addFavorite, removeFavorite];
+    return [value, setStoredValue, addFavorite, removeFavorite, isFavorite];
 }
