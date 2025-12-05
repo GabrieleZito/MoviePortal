@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SearchPage from "./components/SearchPage/SearchPage";
+import SearchPage from "./Components/SearchPage/SearchPage";
 import FilmPage from "./components/FilmPage/FilmPage";
 import TVPage from "./components/TVPage/TVPage";
 import FavoritePage from "./components/FavoritePage/FavoritePage";
