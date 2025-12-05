@@ -24,7 +24,6 @@ export default function Navbar({ changePage, setSearch }) {
                 <li onClick={() => changePage(1)}>Film</li>
                 <li onClick={() => changePage(2)}>Serie TV</li>
                 <li onClick={() => changePage(3)}>Preferiti</li>
-                <li onClick={() => changePage(4)}>Contatti</li>
                 <li onClick={() => changePage(5)}>Account</li>
             </ul>
 

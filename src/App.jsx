@@ -3,7 +3,6 @@ import SearchPage from "./Components/SearchPage/SearchPage";
 import FilmPage from "./Components/FilmPage/FilmPage";
 import TVPage from "./Components/TVPage/TVPage";
 import FavoritePage from "./components/FavoritePage/FavoritePage";
-import ContactsPage from "./Components/ContactsPage/ContactsPage";
 import AccountPage from "./Components/AccountPage/AccountPage";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -26,8 +25,6 @@ function App() {
         renderPage = <TVPage />;
     } else if (page == 3) {
         renderPage = <FavoritePage favorites={favorites} />;
-    } else if (page == 4) {
-        renderPage = <ContactsPage />;
     } else if (page == 5) {
         renderPage = <AccountPage />;
     }
