@@ -106,6 +106,18 @@ const getTVSeriesByGenre = async (genreId = 28, language = "en-US", page = 1) =>
     return res.data;
 };
 
+const searchMovie = async (search = "matrix", language = "en-US", page = 1) => {
+    console.log("searching movie for: ", search);
+    const res = await axiosConf.get(`/movie?query=${search}&include_adult=false&language=${language}&page=${page}`);
+    return res.data;
+};
+
+const searchTVSeries = async (search = "braking bad", language = "en-US", page = 1) => {
+    console.log("searching tv for: ", search);
+    const res = await axiosConf.get(`/tv?query=${search}&include_adult=false&language=${language}&page=${page}`);
+    return res.data;
+};
+
 const tmdbAPI = {
     getPopularMovies,
     getTopRatedMovies,
@@ -123,6 +135,8 @@ const tmdbAPI = {
     getTVSeriesgenres,
     getMovieByGenre,
     getTVSeriesByGenre,
+    searchMovie,
+    searchTVSeries,
 };
 
 export default tmdbAPI;

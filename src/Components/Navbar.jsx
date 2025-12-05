@@ -3,6 +3,7 @@ import "./NavBar.css";
 
 export function Navbar({ changePage }) {
     const [darkMode, setDarkMode] = useState(false);
+    const [search, setSearch] = useState("");
 
     return (
         <nav className={`navbar ${darkMode ? "dark" : ""}`}>
@@ -12,7 +13,12 @@ export function Navbar({ changePage }) {
 
                 {/* SEARCH */}
                 <div className="search-box">
-                    <input type="text" placeholder="cosa vuoi cercare..." />
+                    <input
+                        type="text"
+                        placeholder="cosa vuoi cercare..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
                     <button>Cerca</button>
                 </div>
             </div>
