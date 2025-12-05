@@ -2,12 +2,14 @@
   width: 260px;
   border-radius: 16px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  background: #ffffffeb;
+  box-shadow: #ffd700 0px 20px 40px 2px;
   font-family: sans-serif;
   padding: 10px;
 }
-
+.cardContainer.light {
+  box-shadow: #000000 3px 20px 31px 9px;
+}
 .poster {
   width: 100%;
   height: 380px;
@@ -51,7 +53,7 @@
   border: none;
   background-color: rgba(0, 0, 0, 0.85);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
-  color: #ffda44;
+  color: #ffd700;
   font-weight: bold;
   font-size: 0.85rem;
   padding: 6px 12px;
@@ -62,7 +64,26 @@
 }
 
 .toggleOverviewBtn:hover {
-  background-color: #ffda44;
+  background-color: #ffd700;
   transform: scale(1.05);
   color: black;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heartButton {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: transform 0.2s ease;
+}
+
+.heartButton:hover {
+  transform: scale(1.15);
 }

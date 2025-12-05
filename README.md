@@ -1,9 +1,8 @@
-Users Story
-Come spettatore appassionato voglio cercare, vedere dettagli e salvare film così da avere una piattaforma semplice per scoprire cosa guardare.
+# React + Vite
 
-Nella nostra piattaforma avremo
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# una navbar interattiva in cui potremmo spostarci all'interno di varie schede:
+Currently, two official plugins are available:
 
 -   Logo del nostro sito fisso su tutte le schede (cliccandolo si accederà alla Home)
 

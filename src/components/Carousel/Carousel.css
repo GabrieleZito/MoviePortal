@@ -1,4 +1,5 @@
 .carousel-container {
+  margin-top: 10px;
   position: relative;
   width: 100%;
   margin: auto;
@@ -9,6 +10,14 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  padding-bottom: 182px;
+  padding-top: 182px;
+  gap: 10px;
+  background-color: #ffd700;
+}
+
+.carousel-track.dark {
+  background-color: #222;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -46,7 +55,7 @@
 
 .arrow:hover {
   transform: translateY(-50%) scale(1.15);
-  background-color: #ffda44;
+  background-color: #ffd700;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
   color: black;
 }

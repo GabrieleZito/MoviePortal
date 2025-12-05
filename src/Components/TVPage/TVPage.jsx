@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import tmdbAPI from "../../api/movieDB";
 import GenreSelector from "../GenreSelector/GenreSelector";
 import Carousel from "@/components/Carousel/Carousel";
+import tmdbAPI from "../../api/movieDB";
+import "./TVPage.css";
 
 export default function TVPage() {
     const [genres, setGenres] = useState(null);

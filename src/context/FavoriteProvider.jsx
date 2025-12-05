@@ -1,5 +1,5 @@
-import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { createContext, useState } from "react";
+import { createContext } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const FavoriteContext = createContext();
 

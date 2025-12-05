@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import GenreSelector from "../GenreSelector/GenreSelector";
 import tmdbAPI from "../../api/movieDB";
-import "./FilmPage.css";
 import Carousel from "@/components/Carousel/Carousel";
+import "./FilmPage.css";
 
 export default function FilmPage() {
     const [genres, setGenres] = useState(null);
@@ -10,13 +10,12 @@ export default function FilmPage() {
     const [selectedCategory, setSelectedCategory] = useState("popular");
     const [isLoadingGenres, setisLoadingGenres] = useState(false);
     const [isLoadingMovies, setIsLoadingMovies] = useState(false);
-    //console.log(selectedCategory);
+
     useEffect(() => {
         const getGenres = async () => {
             setisLoadingGenres(true);
             try {
                 const data = await tmdbAPI.getMoviegenres("it");
-                //console.log(data.genres);
                 setGenres(data.genres);
                 setisLoadingGenres(false);
             } catch (error) {
