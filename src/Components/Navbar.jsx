@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./NavBar.css";
+import { useTheme } from "@/hooks/useTheme";
 
 export function Navbar({ changePage }) {
-    const [darkMode, setDarkMode] = useState(false);
     const [search, setSearch] = useState("");
+    const { theme, toggleTheme } = useTheme();
 
     return (
-        <nav className={`navbar ${darkMode ? "dark" : ""}`}>
+        <nav className={`navbar ${theme}`}>
             {/* LOGO */}
             <div className="navbar-left">
                 <div className="logo">ZAP Channel</div>
@@ -37,7 +38,7 @@ export function Navbar({ changePage }) {
             <div className="navbar-right">
                 {/* SWITCH */}
                 <label className="switch">
-                    <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+                    <input type="checkbox" onChange={toggleTheme} />
                     <span className="slider"></span>
                 </label>
             </div>
