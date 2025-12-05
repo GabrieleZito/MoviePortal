@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import tmdbAPI from "../../api/movieDB";
 import GenreSelector from "../GenreSelector/GenreSelector";
 import Carousel from "@/components/Carousel/Carousel";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function TVPage() {
     const [genres, setGenres] = useState(null);
@@ -9,6 +10,7 @@ export default function TVPage() {
     const [isLoadingGenres, setisLoadingGenres] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("popular");
     const [isLoadingSeries, setIsLoadingSeries] = useState(false);
+    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         const getGenres = async () => {
@@ -57,7 +59,7 @@ export default function TVPage() {
 
     return (
         <div>
-            <div className="nav">
+            <div className={`nav ${theme}`}>
                 <div className="nav-item" onClick={() => setSelectedCategory("popular")}>
                     Popolari
                 </div>

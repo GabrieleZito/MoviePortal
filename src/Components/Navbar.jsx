@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./NavBar.css";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -23,7 +22,6 @@ export function Navbar({ changePage, setSearch }) {
                 </div>
             </div>
 
-            {/* LINKS */}
             <ul className="navbar-links">
                 <li onClick={() => changePage(1)}>Film</li>
                 <li onClick={() => changePage(2)}>Serie TV</li>
@@ -32,9 +30,7 @@ export function Navbar({ changePage, setSearch }) {
                 <li onClick={() => changePage(5)}>Account</li>
             </ul>
 
-            {/* GENERI + DARK MODE */}
             <div className="navbar-right">
-                {/* SWITCH */}
                 <label className="switch">
                     <input type="checkbox" onChange={toggleTheme} />
                     <span className="slider"></span>
