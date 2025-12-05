@@ -9,12 +9,12 @@ export function ThemeProvider({ children }) {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  const isLight = theme === "light";
-  const value = {
-    theme,
-    toggleTheme,
-    isLight,
-  };
+    const isLight = theme === "light";
+    const value = {
+        theme,
+        toggleTheme,
+        isLight,
+    };
 
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

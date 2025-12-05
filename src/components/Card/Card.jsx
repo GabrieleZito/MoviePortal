@@ -37,18 +37,18 @@ export default function Card({ film }) {
         <div className="titleRow">
           <h2 className="filmTitle">{film.title}</h2>
 
-          <button
-            className="heartButton"
-            onClick={handleFavoriteClick}
-            aria-label="Aggiungi ai preferiti"
-          >
-            {favored ? "❤️" : "🤍"}
-          </button>
-        </div>
+            <div className="filmInfo">
+                <div className="titleRow">
+                    <h2 className="filmTitle">{film.title || film.name}</h2>
 
-        <p className="releaseDate">
-          {film.release_date ? film.release_date.slice(0, 4) : "N/A"}
-        </p>
+                    <button className="heartButton" onClick={handleFavoriteClick} aria-label="Aggiungi ai preferiti">
+                        {favored ? "❤️" : "🤍"}
+                    </button>
+                </div>
+
+                <p className="releaseDate">
+                    {film.release_date ? film.release_date.slice(0, 4) : (film.first_air_date ? film.first_air_date.slice(0, 4): "N/A")}
+                    </p>
 
         <p className="filmOverview">
           {film.overview ? film.overview.slice(0, 100) + "..." : "N/A"}
