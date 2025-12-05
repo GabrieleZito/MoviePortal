@@ -3,7 +3,7 @@ import SearchPage from "./Components/SearchPage/SearchPage";
 import FilmPage from "./Components/FilmPage/FilmPage";
 import TVPage from "./Components/TVPage/TVPage";
 import FavoritePage from "./components/FavoritePage/FavoritePage";
-import ContactsPage from "./components/ContactsPage/ContactsPage";
+import ContactsPage from "./Components/ContactsPage/ContactsPage";
 import AccountPage from "./components/AccountPage/AccountPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
