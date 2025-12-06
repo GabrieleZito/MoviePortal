@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MovieModal } from "../MovieModal/MovieModal";
 import { useFavorite } from "@/hooks/useFavorite";
 import "./Card.css";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function Card({ film }) {
     const fallback = "https://via.placeholder.com/400x600?text=No+Image";
