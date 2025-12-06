@@ -37,7 +37,13 @@ export default function Card({ film }) {
                     </button>
                 </div>
 
-                <p className="releaseDate">{film.release_date ? film.release_date.slice(0, 4) : "N/A"}</p>
+                <p className="releaseDate">
+                    {film.release_date
+                        ? film.release_date.slice(0, 4)
+                        : film.first_air_date
+                        ? film.first_air_date.slice(0, 4)
+                        : "N/A"}
+                </p>
 
                 <p className="filmOverview">{film.overview ? film.overview.slice(0, 100) + "..." : "N/A"}</p>
 
