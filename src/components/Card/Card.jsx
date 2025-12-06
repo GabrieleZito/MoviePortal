@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { MovieModal } from "../MovieModal/MovieModal";
-import { useFavorite } from "../../hooks/useFavorite";
+import { useFavorite } from "@/hooks/useFavorite";
 import "./Card.css";
-import { useTheme } from "../../hooks/useTheme";
 
 export default function Card({ film }) {
   const fallback = "https://via.placeholder.com/400x600?text=No+Image";
@@ -10,24 +9,16 @@ export default function Card({ film }) {
   const { theme } = useTheme();
   const { addFavorite, removeFavorite, isFavorite } = useFavorite();
 
-  const favored = isFavorite(film.id);
+    // Hook preferiti
+    const { addFavorite, removeFavorite, isFavorite } = useFavorite();
 
-  const handleFavoriteClick = () => {
-    if (favored) {
-      removeFavorite(film.id);
-    } else {
-      addFavorite(film);
-    }
-  };
+    const favored = isFavorite(film.id);
 
-  return (
-    <div className={`cardContainer ${theme}`}>
-      <img
-        className="poster"
-        src={
-          film.poster_path
-            ? `https://image.tmdb.org/t/p/w500${film.poster_path}`
-            : fallback
+    const handleFavoriteClick = () => {
+        if (favored) {
+            removeFavorite(film.id);
+        } else {
+            addFavorite(film);
         }
         alt={film.title || film.name}
       />
@@ -52,27 +43,18 @@ export default function Card({ film }) {
             : "N/A"}
         </p>
 
-        <p className="filmOverview">
-          {film.overview ? film.overview.slice(0, 100) + "..." : "N/A"}
-        </p>
+                <p className="filmOverview">{film.overview ? film.overview.slice(0, 100) + "..." : "N/A"}</p>
 
-        {film.overview && film.overview.length > 100 && (
-          <button
-            className="toggleOverviewBtn"
-            onClick={() => setShowModal(true)}
-          >
-            Mostra tutto
-          </button>
-        )}
+                {film.overview && film.overview.length > 100 && (
+                    <button className="toggleOverviewBtn" onClick={() => setShowModal(true)}>
+                        Mostra tutto
+                    </button>
+                )}
 
-        <p className="filmVote">
-          ⭐ {film.vote_average ? film.vote_average.toFixed(1) : "N/A"}
-        </p>
-      </div>
+                <p className="filmVote">⭐ {film.vote_average ? film.vote_average.toFixed(1) : "N/A"}</p>
+            </div>
 
-      {showModal && (
-        <MovieModal film={film} onClose={() => setShowModal(false)} />
-      )}
-    </div>
-  );
+            {showModal && <MovieModal film={film} onClose={() => setShowModal(false)} />}
+        </div>
+    );
 }

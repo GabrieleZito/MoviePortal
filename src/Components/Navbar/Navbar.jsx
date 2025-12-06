@@ -26,12 +26,12 @@ export default function Navbar({ changePage, setSearch }) {
         </div>
       </div>
 
-      <ul className="navbar-links">
-        <li onClick={() => changePage(1)}>Film</li>
-        <li onClick={() => changePage(2)}>Serie TV</li>
-        <li onClick={() => changePage(3)}>Preferiti</li>
-        <li onClick={() => changePage(5)}>Account</li>
-      </ul>
+            <ul className="navbar-links">
+                <li onClick={() => changePage(1)}>Film</li>
+                <li onClick={() => changePage(2)}>Serie TV</li>
+                <li onClick={() => changePage(3)}>Preferiti</li>
+                <li onClick={() => changePage(5)}>Account</li>
+            </ul>
 
       <div className="navbar-right">
         <label className="switch">
